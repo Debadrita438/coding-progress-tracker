@@ -2,6 +2,8 @@ import React from "react";
 
 import Courses from "../components/Courses";
 
+import "../styles/Homepage.scss";
+
 function Homepage() {
     return (
         <div className="container">
