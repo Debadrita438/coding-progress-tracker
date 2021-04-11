@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+$boxlight: #9fc4f0;
+$boxMain: #4a90e2;
+$boxSec: #1b5daa;
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "heading"
+        "Subjects";
+
+    &--heading {
+        grid-area: heading;
+        padding: 1em 0em;
+        &--Cname h1 {
+            text-align: center;
+        }
+    }
+    &--Subjects {
+        grid-area: Subjects;
+        padding: 1em 0em;
+        display: grid;
+        &--sub {
+            color: $boxSec;
+            font-family: "Roboto", sans-serif;
+            background-color: $boxMain;
+            padding: 2em;
+            height: 12em;
+            margin: 0.5em 0em;
+            border-radius: 1em;
+            display: flex;
+            justify-content: space-between;
+            &--left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                & > * {
+                    margin: 0px;
+                }
+
+                button {
+                    background-color: $boxlight;
+                    color: $boxSec;
+                    font-weight: 900;
+                    border: none;
+                    margin: 1em 0em 0em 0em;
+                    padding: 1em 1em;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 1em;
+                    transition: all 0.2s;
+                    font-size: medium;
+                }
+                button:hover {
+                    outline: 0;
+                    background-color: $boxSec;
+                    color: $boxMain;
+                    transition: all 0.2s;
+                }
+                button:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 0em 5em;
+        &--heading {
+            display: flex;
+            justify-content: space-between;
+        }
+        &--Subjects {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            &--sub--left button {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        padding: 0em 10em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0em 20em;
+    }
+}
