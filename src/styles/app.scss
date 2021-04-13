@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Roboto&display=swap");
+html,
+body {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-family: "Roboto", sans-serif;
+    background-color: #23272a;
+    color: #ffffff;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-weight: 900;
+        margin: 0.5em;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+
+    .App {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 1.2em;
+    }
+}
