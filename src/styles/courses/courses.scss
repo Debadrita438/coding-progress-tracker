@@ -2,12 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 1em 1em 1em 2em;
+    padding: 1em 1em 1em 1.5em;
     border-radius: 1em;
-
     background-color: #7289da;
     color: #2c2f33;
+    height: 6em;
 
     h1 {
         margin: 0px;
@@ -15,7 +14,7 @@
 
     h2 {
         margin: 0px;
-        font-size: 01rem;
+        font-size: 1rem;
     }
 
     p {
@@ -62,6 +61,7 @@
 @media (max-width: 700px) {
     .course {
         margin: 0.5em;
+        height: 2.5em;
 
         h1 {
             font-size: 1.2em;
